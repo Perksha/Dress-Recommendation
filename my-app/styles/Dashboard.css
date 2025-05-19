@@ -1,0 +1,283 @@
+/* Base Styles */
+:root {
+  --primary-color: #6a11cb;
+  --secondary-color: #2575fc;
+  --accent-color: #ff6b6b;
+  --text-color: #333;
+  --light-text: #fff;
+  --dark-bg: #1a1a1a;
+  --light-bg: #f8f9fa;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--light-bg);
+}
+
+/* Navbar Styles */
+.navbar {
+  width: 99vw; /* or use 100% */
+  margin: 0;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin: 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-links li a:hover {
+  color: var(--primary-color);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: var(--light-bg);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  max-width: 100%;
+}
+
+.search-container input {
+  border: none;
+  background: transparent;
+  width: 100%;
+  padding: 0.3rem;
+  outline: none;
+}
+
+.search-container button {
+  background: transparent;
+  border: none;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+/* Filter Section */
+.filter-section {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 5%;
+  background: white;
+  box-shadow: var(--box-shadow);
+  margin: 2rem auto;
+  width: 90%;
+  border-radius: var(--border-radius);
+}
+
+.filter-section select {
+  padding: 0.8rem 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  background-color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: var(--transition);
+  min-width: 200px;
+}
+
+.filter-section select:focus,
+.filter-section select:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(106, 17, 203, 0.1);
+}
+
+/* Dress Collection */
+.dress-card p:last-child {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+:root {
+  --border-radius: 10px;
+  --box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --text-color: #333;
+  --primary-color: #ff69b4; /* Adjust to your theme */
+}
+
+.dress-collection {
+  padding: 2rem 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dress-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.dress-card {
+  background: #fff;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  cursor: pointer;
+}
+
+.dress-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+.dress-image {
+  width: 100%;
+  height: 200px; /* Reduced from 300px */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.dress-card:hover .dress-image {
+  transform: scale(1.04);
+}
+
+.dress-card h3 {
+  font-size: 1rem;
+  margin: 0.8rem 1rem 0.4rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.dress-card p {
+  margin: 0 1rem 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.3;
+}
+
+@media (max-width: 768px) {
+  .dress-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
+  .dress-image {
+    height: 160px;
+  }
+}
+
+
+/* Loading and Error States */
+.dress-collection p {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  margin: 1rem 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .navbar {
+    width: 95%;
+  }
+
+  .filter-section {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    padding: 1rem 3%;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .search-container {
+    order: 2;
+    width: 100%;
+    max-width: none;
+  }
+
+  .filter-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter-section select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .dress-grid {
+    grid-template-columns: 1fr;
+  }
+}
